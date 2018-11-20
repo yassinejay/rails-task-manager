@@ -1,0 +1,13 @@
+<h2>Task Details</h2>
+<p><%= @task.details %></p>
+<% if @task.completed  %>
+  <p><i class="far fa-thumbs-up"></i><%= @task.title %></p>
+  <% else %>
+  <p> <i class="far fa-thumbs-down"></i></i><%= @task.title %></p>
+  <% end %>
+<%= link_to 'Return to Tasks', tasks_path%>
+<div>
+<%= link_to 'Edit Task', edit_path, class: "fas fa-edit"%>
+<%= link_to 'delete Task',task_path(@task), method: :delete, class: "fas fa-trash-alt" %>
+
+</div>
